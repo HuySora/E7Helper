@@ -9,6 +9,13 @@
       },
       "hash": "2a1457028cf2fce25852740b6a34274fa8aea10a"
     },
+    "com.github-glitchenzo.nugetforunity": {
+      "version": "4.4.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.animation": {
       "version": "10.1.4",
       "depth": 1,
