@@ -1,0 +1,3265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>X10D.Unity</name>
+    </assembly>
+    <members>
+        <member name="T:X10D.Unity.ComponentExtensions">
+            <summary>
+                Extension methods for <see cref="T:UnityEngine.Component" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.ComponentExtensions.GetComponentsInChildrenOnly``1(UnityEngine.Component)">
+            <summary>
+                Returns an array of components of the specified type, excluding components that live on the object to which this
+                component is attached.
+            </summary>
+            <param name="component">The component whose child components to retrieve.</param>
+            <typeparam name="T">The type of the components to retrieve.</typeparam>
+            <returns>An array <typeparamref name="T" /> representing the child components.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="component" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="T:X10D.Unity.DebugUtility">
+            <summary>
+                An extended version of Unity's <see cref="T:UnityEngine.Debug" /> utility class which offers support for drawing simple
+                primitives.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(UnityEngine.Vector2,System.Single,System.Int32)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="center">The center point of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(UnityEngine.Vector2,System.Single,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="center">The center point of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(UnityEngine.Vector2,System.Single,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(UnityEngine.Vector2,System.Single,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(UnityEngine.Vector2,System.Single,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle.
+            </summary>
+            <param name="center">The center point of the circle.</param>
+            <param name="radius">The radius of the circle.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Vector3@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.Circle@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Vector3@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@)">
+            <summary>
+                Draws a circle with the specified color.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle with the specified color and duration.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawCircle(X10D.Drawing.CircleF@,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a circle.
+            </summary>
+            <param name="circle">The circle to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="F:X10D.Unity.DebugUtility.DefaultDrawDuration">
+            <summary>
+                The default value to use for the <c>duration</c> parameter.
+            </summary>
+        </member>
+        <member name="F:X10D.Unity.DebugUtility.DefaultDepthTest">
+            <summary>
+                The default value to use for the <c>depthTest</c> parameter.
+            </summary>
+        </member>
+        <member name="P:X10D.Unity.DebugUtility.isDebugBuild">
+            <summary>
+                Gets a value indicating whether this is a debug build.
+            </summary>
+            <value><see langword="true" /> if this is a debug build; otherwise, <see langword="false" />.</value>
+        </member>
+        <member name="P:X10D.Unity.DebugUtility.isDeveloperConsoleVisible">
+            <summary>
+                Gets a value indicating whether the developer console is visible.
+            </summary>
+            <value><see langword="true" /> if the developer console is visible; otherwise, <see langword="false" />.</value>
+        </member>
+        <member name="P:X10D.Unity.DebugUtility.unityLogger">
+            <summary>
+                Gets the default Unity debug logger.
+            </summary>
+            <value>The Unity debug logger.</value>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert(System.Boolean)">
+            <summary>
+                Asserts a condition.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert(System.Boolean,UnityEngine.Object)">
+            <summary>
+                Asserts a condition.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+            <param name="context">The object to which the assertion applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert(System.Boolean,System.String)">
+            <summary>
+                Asserts a condition.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert``1(System.Boolean,``0)">
+            <summary>
+                Asserts a condition.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert(System.Boolean,System.String,UnityEngine.Object)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the assertion applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Assert``1(System.Boolean,``0,UnityEngine.Object)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="condition">The condition to assert.</param>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the assertion applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Break">
+            <summary>
+                Pauses the editor.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.ClearDeveloperConsole">
+            <summary>
+                Clears the developer console.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.ExtractStackTraceNoAlloc(System.Byte*,System.Int32,System.String)">
+            <summary>
+                Populate an unmanaged buffer with the current managed call stack as a sequence of UTF-8 bytes, without allocating GC
+                memory.
+            </summary>
+            <param name="buffer">The target buffer to receive the callstack text.</param>
+            <param name="bufferMax">The maximum number of bytes to write.</param>
+            <param name="projectFolder">The project folder path, to clean up path names.</param>
+            <returns>The number of bytes written into the buffer.</returns>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Log(System.String)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Log``1(``0)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Log(System.String,UnityEngine.Object)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.Log``1(``0,UnityEngine.Object)">
+            <summary>
+                Logs a message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogAssertion(System.String)">
+            <summary>
+                Logs an assertion message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogAssertion``1(``0)">
+            <summary>
+                Logs an assertion message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogAssertion(System.String,UnityEngine.Object)">
+            <summary>
+                Logs an assertion message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogAssertion``1(``0,UnityEngine.Object)">
+            <summary>
+                Logs an assertion message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogError(System.String)">
+            <summary>
+                Logs an error message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogError``1(``0)">
+            <summary>
+                Logs an error message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogError(System.String,UnityEngine.Object)">
+            <summary>
+                Logs an error message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogError``1(``0,UnityEngine.Object)">
+            <summary>
+                Logs an error message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogErrorFormat(System.String,System.Object[])">
+            <summary>
+                Logs a formatted error message to the Unity Console.
+            </summary>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogErrorFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+                Logs a formatted error message to the Unity Console.
+            </summary>
+            <param name="context">The object to which this message applies.</param>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogFormat(System.String,System.Object[])">
+            <summary>
+                Logs a formatted message to the Unity Console.
+            </summary>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+                Logs a formatted message to the Unity Console.
+            </summary>
+            <param name="context">The object to which this message applies.</param>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarning(System.String)">
+            <summary>
+                Logs a warning message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarning``1(``0)">
+            <summary>
+                Logs a warning message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarning(System.String,UnityEngine.Object)">
+            <summary>
+                Logs a warning message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarning``1(``0,UnityEngine.Object)">
+            <summary>
+                Logs a warning message to the Unity Console.
+            </summary>
+            <param name="message">The message to log.</param>
+            <param name="context">The object to which the message applies.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarningFormat(System.String,System.Object[])">
+            <summary>
+                Logs a formatted warning message to the Unity Console.
+            </summary>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.LogWarningFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+                Logs a formatted warning message to the Unity Console.
+            </summary>
+            <param name="context">The object to which this message applies.</param>
+            <param name="format">The format string of the message to log.</param>
+            <param name="args">The format arguments.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radius">The radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radius">The radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radius">The radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radius">The radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,UnityEngine.Vector2,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radius">The radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,System.Single,System.Single,System.Int32)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radiusX">The horizontal radius of the ellipse.</param>
+            <param name="radiusY">The vertical radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,System.Single,System.Single,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radiusX">The horizontal radius of the ellipse.</param>
+            <param name="radiusY">The vertical radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,System.Single,System.Single,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radiusX">The horizontal radius of the ellipse.</param>
+            <param name="radiusY">The vertical radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,System.Single,System.Single,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radiusX">The horizontal radius of the ellipse.</param>
+            <param name="radiusY">The vertical radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(UnityEngine.Vector2,System.Single,System.Single,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse.
+            </summary>
+            <param name="center">The center point of the ellipse.</param>
+            <param name="radiusX">The horizontal radius of the ellipse.</param>
+            <param name="radiusY">The vertical radius of the ellipse.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Vector2)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Vector2,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.Ellipse,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Vector2)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Vector2,UnityEngine.Color@)">
+            <summary>
+                Draws an ellipse with the specified color.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse with the specified color and duration.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawEllipse(X10D.Drawing.EllipseF,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an ellipse.
+            </summary>
+            <param name="ellipse">The ellipse to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the ellipse.</param>
+            <param name="color">The color of the ellipse.</param>
+            <param name="duration">
+                The duration of the ellipse's visibility, in seconds. If 0 is passed, the ellipse is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the ellipse be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawFunction(System.Func{System.Single,System.Single},System.Single,System.Single)">
+            <summary>
+                Draws a function plot.
+            </summary>
+            <param name="function">The function to plot.</param>
+            <param name="xMin">The minimum X value.</param>
+            <param name="xMax">The maximum X value.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawFunction(System.Func{System.Single,System.Single},System.Single,System.Single,System.Single,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a function plot.
+            </summary>
+            <param name="function">The function to plot.</param>
+            <param name="xMin">The minimum X value.</param>
+            <param name="xMax">The maximum X value.</param>
+            <param name="step">The X increment.</param>
+            <param name="offset">The drawing offset of the circle.</param>
+            <param name="color">The color of the circle.</param>
+            <param name="duration">
+                The duration of the circle's visibility, in seconds. If 0 is passed, the circle is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the circle be obscured by objects closer to the camera.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="function" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Draws a line between start and end points.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="end">The ending point.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="end">The ending point.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="end">The ending point.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="end">The ending point.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line)">
+            <summary>
+                Draws a line between start and end points.
+            </summary>
+            <param name="line">The line to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line,UnityEngine.Color@)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.LineF)">
+            <summary>
+                Draws a line between start and end points.
+            </summary>
+            <param name="line">The line to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.LineF,UnityEngine.Color@)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.LineF,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.LineF,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line3D)">
+            <summary>
+                Draws a line between start and end points.
+            </summary>
+            <param name="line">The line to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line3D,UnityEngine.Color@)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line3D,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawLine(X10D.Drawing.Line3D,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a line between start and end points, with the specified color.
+            </summary>
+            <param name="line">The line to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Vector3@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Color@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Vector3@,UnityEngine.Color@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Vector3@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.Polygon,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Vector3@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Color@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Vector3@,UnityEngine.Color@)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Vector3@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolygon(X10D.Drawing.PolygonF,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polygon.
+            </summary>
+            <param name="polygon">The polygon to draw.</param>
+            <param name="offset">The drawing offset of the polygon.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polygon's visibility, in seconds. If 0 is passed, the polygon is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polygon" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Vector3@)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="offset">The drawing offset of the polyhedron.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Color@)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Vector3@,UnityEngine.Color@)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="offset">The drawing offset of the polyhedron.</param>
+            <param name="color">The color to use for drawing.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polyhedron's visibility, in seconds. If 0 is passed, the polyhedron is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Vector3@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="offset">The drawing offset of the polyhedron.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polyhedron's visibility, in seconds. If 0 is passed, the polyhedron is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polyhedron's visibility, in seconds. If 0 is passed, the polyhedron is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="offset">The drawing offset of the polyhedron.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polyhedron's visibility, in seconds. If 0 is passed, the polyhedron is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polyhedron" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawUnjoinedPolyhedron(X10D.Drawing.Polyhedron,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron to draw.</param>
+            <param name="offset">The drawing offset of the polyhedron.</param>
+            <param name="color">The color to use for drawing.</param>
+            <param name="duration">
+                The duration of the polyhedron's visibility, in seconds. If 0 is passed, the polyhedron is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polyhedron" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Ray)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="ray">The ray to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Ray,UnityEngine.Color@)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="ray">The ray to draw.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Ray,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="ray">The ray to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Ray,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="ray">The ray to draw.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="direction">The direction.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="direction">The direction.</param>
+            <param name="color">The color of the line.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="direction">The direction.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a ray.
+            </summary>
+            <param name="start">The starting point.</param>
+            <param name="direction">The direction.</param>
+            <param name="color">The color of the line.</param>
+            <param name="duration">
+                The duration of the line's visibility, in seconds. If 0 is passed, the line is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the line be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+                Draws a rectangle.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Color@)">
+            <summary>
+                Draws a rectangle with the specified color.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Rect,UnityEngine.Color@)">
+            <summary>
+                Draws a rectangle with the specified color.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Rect,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.Rect,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.RectInt,UnityEngine.Color@)">
+            <summary>
+                Draws a rectangle with the specified color.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.RectInt,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(UnityEngine.RectInt,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rect">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.Rectangle,UnityEngine.Color@)">
+            <summary>
+                Draws a rectangle with the specified color.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.Rectangle,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.Rectangle,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.RectangleF,UnityEngine.Color@)">
+            <summary>
+                Draws a rectangle with the specified color.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.RectangleF,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawRectangle(System.Drawing.RectangleF,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a rectangle with the specified color and duration.
+            </summary>
+            <param name="rectangle">The rectangle to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(UnityEngine.Vector3,System.Single,System.Int32)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="center">The center point of the sphere.</param>
+            <param name="radius">The radius of the sphere.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="center">The center point of the sphere.</param>
+            <param name="radius">The radius of the sphere.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a sphere with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the sphere.</param>
+            <param name="radius">The radius of the sphere.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a sphere with the specified color and duration.
+            </summary>
+            <param name="center">The center point of the sphere.</param>
+            <param name="radius">The radius of the sphere.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the sphere be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a sphere.
+            </summary>
+            <param name="center">The center point of the sphere.</param>
+            <param name="radius">The radius of the sphere.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the sphere.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the sphere be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Vector2)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the sphere.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Color@)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Vector2,UnityEngine.Color@)">
+            <summary>
+                Draws a sphere with the specified color.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the sphere.</param>
+            <param name="color">The color of the sphere.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a sphere with the specified color and duration.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Vector2,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a sphere with the specified color and duration.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the sphere.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a sphere with the specified color and duration.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the sphere be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawSphere(X10D.Drawing.Sphere,System.Int32,UnityEngine.Vector3@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a sphere.
+            </summary>
+            <param name="sphere">The sphere to draw.</param>
+            <param name="segments">The number of segments to generate.</param>
+            <param name="offset">The drawing offset of the sphere.</param>
+            <param name="color">The color of the sphere.</param>
+            <param name="duration">
+                The duration of the sphere's visibility, in seconds. If 0 is passed, the sphere is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the sphere be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Bounds@)">
+            <summary>
+                Draws an axis-aligned bounding box.
+            </summary>
+            <param name="bounds">The bounding box to draw.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Bounds@,UnityEngine.Color@)">
+            <summary>
+                Draws an axis-aligned bounding box.
+            </summary>
+            <param name="bounds">The bounding box to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Bounds@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws an axis-aligned bounding box.
+            </summary>
+            <param name="bounds">The bounding box to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Bounds@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws an axis-aligned bounding box.
+            </summary>
+            <param name="bounds">The bounding box to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Draws a wireframe cube with a center and a size.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Quaternion)">
+            <summary>
+                Draws a wireframe cube with the specified orientation.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="orientation">The orientation of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@)">
+            <summary>
+                Draws a wireframe cube with the specified color.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Color@)">
+            <summary>
+                Draws a wireframe cube with the specified orientation and color.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="orientation">The orientation of the box.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a wireframe cube with the specified color and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a wireframe cube with the specified orientation, color, and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="orientation">The orientation of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a wireframe cube with the specified color and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a wireframe cube with the specified orientation, color, and duration.
+            </summary>
+            <param name="center">The center point.</param>
+            <param name="size">The extents of the box.</param>
+            <param name="orientation">The orientation of the box.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(X10D.Drawing.Cuboid@,UnityEngine.Color@)">
+            <summary>
+                Draws a wireframe cube with the specified color.
+            </summary>
+            <param name="cuboid">The cuboid to draw.</param>
+            <param name="color">The color of the box.</param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(X10D.Drawing.Cuboid@,UnityEngine.Color@,System.Single)">
+            <summary>
+                Draws a wireframe cube with the specified color and duration.
+            </summary>
+            <param name="cuboid">The cuboid to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.DebugUtility.DrawWireCube(X10D.Drawing.Cuboid@,UnityEngine.Color@,System.Single,System.Boolean)">
+            <summary>
+                Draws a wireframe cube with the specified color and duration.
+            </summary>
+            <param name="cuboid">The cuboid to draw.</param>
+            <param name="color">The color of the box.</param>
+            <param name="duration">
+                The duration of the box's visibility, in seconds. If 0 is passed, the box is visible for a single frame.
+            </param>
+            <param name="depthTest">
+                <see langword="true" /> if depth test should be applied; otherwise, <see langword="false" />. Passing
+                <see langword="true" /> will have the box be obscured by objects closer to the camera.
+            </param>
+        </member>
+        <member name="T:X10D.Unity.Drawing.Color32Extensions">
+            <summary>
+                Drawing-related extensions for <see cref="T:UnityEngine.Color32" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.Deconstruct(UnityEngine.Color32,System.Byte@,System.Byte@,System.Byte@,System.Byte@)">
+            <summary>
+                Deconstructs the current color into its RGB components.
+            </summary>
+            <param name="color">The source color.</param>
+            <param name="a">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.a" /> component of <paramref name="color" />.
+            </param>
+            <param name="r">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.r" /> component of <paramref name="color" />.
+            </param>
+            <param name="g">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.g" /> component of <paramref name="color" />.
+            </param>
+            <param name="b">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.b" /> component of <paramref name="color" />.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.Deconstruct(UnityEngine.Color32,System.Byte@,System.Byte@,System.Byte@)">
+            <summary>
+                Deconstructs the current color into its RGB components.
+            </summary>
+            <param name="color">The source color.</param>
+            <param name="r">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.r" /> component of <paramref name="color" />.
+            </param>
+            <param name="g">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.g" /> component of <paramref name="color" />.
+            </param>
+            <param name="b">
+                When this method returns, contains the <see cref="F:UnityEngine.Color32.b" /> component of <paramref name="color" />.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.GetClosestConsoleColor(UnityEngine.Color32)">
+            <summary>
+                Returns a <see cref="T:System.ConsoleColor" /> which most closely resembles the current color.
+            </summary>
+            <param name="color">The source color.</param>
+            <returns>The closest <see cref="T:System.ConsoleColor" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.Inverted(UnityEngine.Color32)">
+            <summary>
+                Returns a new <see cref="T:UnityEngine.Color32" /> with the red, green, and blue components inverted. Alpha is not affected.
+            </summary>
+            <param name="color">The color to invert.</param>
+            <returns>The inverted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.ToSystemDrawingColor(UnityEngine.Color32)">
+            <summary>
+                Converts the current color to a <see cref="T:System.Drawing.Color" />.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>The converted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.ToUnityColor32(System.Drawing.Color)">
+            <summary>
+                Converts the current color to a <see cref="T:UnityEngine.Color32" />.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>The converted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.WithA(UnityEngine.Color32,System.Byte)">
+            <summary>
+                Returns a vector whose red, green, and blue components are the same as the specified color, and whose alpha component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="a">The new alpha component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color32.r" />, <see cref="F:UnityEngine.Color32.g" />, and
+                <see cref="F:UnityEngine.Color32.b" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color32.a" /> component is <paramref name="a" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.WithB(UnityEngine.Color32,System.Byte)">
+            <summary>
+                Returns a vector whose red, green, and alpha components are the same as the specified color, and whose blue component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="b">The new blue component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color32.r" />, <see cref="F:UnityEngine.Color32.g" />, and
+                <see cref="F:UnityEngine.Color32.a" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color32.b" /> component is <paramref name="b" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.WithG(UnityEngine.Color32,System.Byte)">
+            <summary>
+                Returns a vector whose red, blue, and alpha components are the same as the specified color, and whose green component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="g">The new green component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color32" /> whose <see cref="F:UnityEngine.Color32.r" />, <see cref="F:UnityEngine.Color32.g" />, and
+                <see cref="F:UnityEngine.Color32.b" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color32.g" /> component is <paramref name="g" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.Color32Extensions.WithR(UnityEngine.Color32,System.Byte)">
+            <summary>
+                Returns a vector whose green, blue, and alpha components are the same as the specified color, and whose red component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="r">The new red component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color32" /> whose <see cref="F:UnityEngine.Color32.g" />, <see cref="F:UnityEngine.Color32.b" />, and
+                <see cref="F:UnityEngine.Color32.a" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color32.r" /> component is <paramref name="r" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.ColorExtensions">
+            <summary>
+                Drawing-related extensions for <see cref="T:UnityEngine.Color" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.Deconstruct(UnityEngine.Color,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+                Deconstructs the current color into its ARGB components.
+            </summary>
+            <param name="color">The source color.</param>
+            <param name="a">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.a" /> component of <paramref name="color" />.
+            </param>
+            <param name="r">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.r" /> component of <paramref name="color" />.
+            </param>
+            <param name="g">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.g" /> component of <paramref name="color" />.
+            </param>
+            <param name="b">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.b" /> component of <paramref name="color" />.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.Deconstruct(UnityEngine.Color,System.Single@,System.Single@,System.Single@)">
+            <summary>
+                Deconstructs the current color into its RGB components.
+            </summary>
+            <param name="color">The source color.</param>
+            <param name="r">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.r" /> component of <paramref name="color" />.
+            </param>
+            <param name="g">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.g" /> component of <paramref name="color" />.
+            </param>
+            <param name="b">
+                When this method returns, contains the <see cref="F:UnityEngine.Color.b" /> component of <paramref name="color" />.
+            </param>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.GetClosestConsoleColor(UnityEngine.Color)">
+            <summary>
+                Returns a <see cref="T:System.ConsoleColor" /> which most closely resembles the current color.
+            </summary>
+            <param name="color">The source color.</param>
+            <returns>The closest <see cref="T:System.ConsoleColor" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.Inverted(UnityEngine.Color)">
+            <summary>
+                Returns a new <see cref="T:UnityEngine.Color" /> with the red, green, and blue components inverted. Alpha is not affected.
+            </summary>
+            <param name="color">The color to invert.</param>
+            <returns>The inverted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.ToSystemDrawingColor(UnityEngine.Color)">
+            <summary>
+                Converts the current color to a <see cref="T:System.Drawing.Color" />.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>The converted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.ToUnityColor(System.Drawing.Color)">
+            <summary>
+                Converts the current color to a <see cref="T:UnityEngine.Color" />.
+            </summary>
+            <param name="color">The color to convert.</param>
+            <returns>The converted color.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.WithA(UnityEngine.Color,System.Single)">
+            <summary>
+                Returns a vector whose red, green, and blue components are the same as the specified color, and whose alpha component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="a">The new alpha component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color.r" />, <see cref="F:UnityEngine.Color.g" />, and
+                <see cref="F:UnityEngine.Color.b" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color.a" /> component is <paramref name="a" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.WithB(UnityEngine.Color,System.Single)">
+            <summary>
+                Returns a vector whose red, green, and alpha components are the same as the specified color, and whose blue component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="b">The new blue component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color.r" />, <see cref="F:UnityEngine.Color.g" />, and
+                <see cref="F:UnityEngine.Color.a" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color.b" /> component is <paramref name="b" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.WithG(UnityEngine.Color,System.Single)">
+            <summary>
+                Returns a vector whose red, blue, and alpha components are the same as the specified color, and whose green component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="g">The new green component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color.r" />, <see cref="F:UnityEngine.Color.b" />, and
+                <see cref="F:UnityEngine.Color.a" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color.g" /> component is <paramref name="g" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.ColorExtensions.WithR(UnityEngine.Color,System.Single)">
+            <summary>
+                Returns a vector whose green, blue, and alpha components are the same as the specified color, and whose red component
+                is a new value.
+            </summary>
+            <param name="color">The color to copy.</param>
+            <param name="r">The new red component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Color" /> whose <see cref="F:UnityEngine.Color.g" />, <see cref="F:UnityEngine.Color.b" />, and
+                <see cref="F:UnityEngine.Color.a" /> components are the same as that of <paramref name="color" />, and whose
+                <see cref="F:UnityEngine.Color.r" /> component is <paramref name="r" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.PointExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.Point" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PointExtensions.ToUnityVector2(System.Drawing.Point)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Point" /> to a <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+            <param name="point">The point to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PointExtensions.ToUnityVector2Int(System.Drawing.Point)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Point" /> to a <see cref="T:UnityEngine.Vector3" />.
+            </summary>
+            <param name="value">The point to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2Int" />.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.PointFExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.PointF" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PointFExtensions.IsOnLine(System.Drawing.PointF,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+                Determines if the current <see cref="T:System.Drawing.PointF" /> lies on the specified <see cref="T:X10D.Drawing.LineF" />.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PointFExtensions.ToUnityVector2(System.Drawing.PointF)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Point" /> to a <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+            <param name="point">The point to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2" />.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.PolygonExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:X10D.Drawing.Polygon" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonExtensions.AddVertex(X10D.Drawing.Polygon,UnityEngine.Vector2Int)">
+            <summary>
+                Adds a vertex to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose points to update.</param>
+            <param name="point">The point to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polygon" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonExtensions.AddVertices(X10D.Drawing.Polygon,System.Collections.Generic.IEnumerable{UnityEngine.Vector2Int})">
+            <summary>
+                Adds a collection of vertices to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose vertices to update.</param>
+            <param name="vertices">The vertices to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="polygon" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="vertices" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="T:X10D.Unity.Drawing.PolygonFExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:X10D.Drawing.PolygonF" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonFExtensions.AddVertex(X10D.Drawing.PolygonF,UnityEngine.Vector2Int)">
+            <summary>
+                Adds a point to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose vertices to update.</param>
+            <param name="vertex">The vertex to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polygon" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonFExtensions.AddVertex(X10D.Drawing.PolygonF,UnityEngine.Vector2)">
+            <summary>
+                Adds a point to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose vertices to update.</param>
+            <param name="vertex">The vertex to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polygon" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonFExtensions.AddVertices(X10D.Drawing.PolygonF,System.Collections.Generic.IEnumerable{UnityEngine.Vector2Int})">
+            <summary>
+                Adds a collection of vertices to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose vertices to update.</param>
+            <param name="vertices">The vertices to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="polygon" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="vertices" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolygonFExtensions.AddVertices(X10D.Drawing.PolygonF,System.Collections.Generic.IEnumerable{UnityEngine.Vector2})">
+            <summary>
+                Adds a collection of vertices to this polygon.
+            </summary>
+            <param name="polygon">The polygon whose vertices to update.</param>
+            <param name="vertices">The vertices to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="polygon" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="vertices" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="T:X10D.Unity.Drawing.PolyhedronExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:X10D.Drawing.Polyhedron" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolyhedronExtensions.AddVertex(X10D.Drawing.Polyhedron,UnityEngine.Vector3Int)">
+            <summary>
+                Adds a vertex to this polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron whose vertices to update.</param>
+            <param name="vertex">The vertex to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polyhedron" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolyhedronExtensions.AddVertex(X10D.Drawing.Polyhedron,UnityEngine.Vector3)">
+            <summary>
+                Adds a vertex to this polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron whose vertices to update.</param>
+            <param name="vertex">The vertex to add.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="polyhedron" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolyhedronExtensions.AddVertices(X10D.Drawing.Polyhedron,System.Collections.Generic.IEnumerable{UnityEngine.Vector3Int})">
+            <summary>
+                Adds a collection of vertices to this polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron whose vertices to update.</param>
+            <param name="vertices">The vertices to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="polyhedron" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="vertices" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.PolyhedronExtensions.AddVertices(X10D.Drawing.Polyhedron,System.Collections.Generic.IEnumerable{UnityEngine.Vector3})">
+            <summary>
+                Adds a collection of vertices to this polyhedron.
+            </summary>
+            <param name="polyhedron">The polyhedron whose vertices to update.</param>
+            <param name="vertices">The vertices to add.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="polyhedron" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="vertices" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="T:X10D.Unity.Drawing.RandomExtensions">
+            <summary>
+                Extension methods for <see cref="T:System.Random" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RandomExtensions.NextColorRgb(System.Random)">
+            <summary>
+                Returns an HDR color of random components for red, green, and blue.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>A <see cref="T:UnityEngine.Color" /> whose red, green, and blue components are all random, and whose alpha is 255</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RandomExtensions.NextColorArgb(System.Random)">
+            <summary>
+                Returns an HDR color composed of random components for apha, red, green, and blue.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>A <see cref="T:UnityEngine.Color" /> whose alpha, red, green, and blue components are all random.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RandomExtensions.NextColor32Rgb(System.Random)">
+            <summary>
+                Returns a color of random components for red, green, and blue.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>A <see cref="T:UnityEngine.Color" /> whose red, green, and blue components are all random, and whose alpha is 255</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RandomExtensions.NextColor32Argb(System.Random)">
+            <summary>
+                Returns a color composed of random components for apha, red, green, and blue.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>A <see cref="T:UnityEngine.Color" /> whose alpha, red, green, and blue components are all random.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="T:X10D.Unity.Drawing.RectangleExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.Rectangle" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectangleExtensions.ToUnityRect(System.Drawing.Rectangle)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Rectangle" /> to a <see cref="T:UnityEngine.Rect" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectangleExtensions.ToUnityRectInt(System.Drawing.Rectangle)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Rectangle" /> to a <see cref="T:UnityEngine.RectInt" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.RectangleFExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.RectangleF" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectangleFExtensions.ToUnityRect(System.Drawing.RectangleF)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.RectangleF" /> to a <see cref="T:UnityEngine.Rect" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.RectExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:UnityEngine.Rect" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectExtensions.ToSystemRectangleF(UnityEngine.Rect)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.Rect" /> to a <see cref="T:System.Drawing.RectangleF" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.RectIntExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:UnityEngine.RectInt" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectIntExtensions.ToSystemRectangle(UnityEngine.RectInt)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.RectInt" /> to a <see cref="T:System.Drawing.Rectangle" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.RectIntExtensions.ToSystemRectangleF(UnityEngine.RectInt)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.RectInt" /> to a <see cref="T:System.Drawing.RectangleF" />.
+            </summary>
+            <param name="rectangle">The rectangle to convert.</param>
+            <returns>The converted rectangle.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.SizeExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.Size" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.SizeExtensions.ToUnityVector2(System.Drawing.Size)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Size" /> to a <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Drawing.SizeExtensions.ToUnityVector2Int(System.Drawing.Size)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.Size" /> to a <see cref="T:UnityEngine.Vector2Int" />.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2Int" />.</returns>
+        </member>
+        <member name="T:X10D.Unity.Drawing.SizeFExtensions">
+            <summary>
+                Drawing-related extension methods for <see cref="T:System.Drawing.SizeF" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Drawing.SizeFExtensions.ToUnityVector2(System.Drawing.SizeF)">
+            <summary>
+                Converts the current <see cref="T:System.Drawing.SizeF" /> to a <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+            <param name="size">The size to convert.</param>
+            <returns>The resulting <see cref="T:UnityEngine.Vector2" />.</returns>
+        </member>
+        <member name="T:X10D.Unity.ExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:X10D.Unity.ExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:X10D.Unity.ExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:X10D.Unity.ExceptionMessages.ComponentAlreadyExists">
+            <summary>
+              Looks up a localized string similar to The game object {0} already has a component of type {1}..
+            </summary>
+        </member>
+        <member name="P:X10D.Unity.ExceptionMessages.ComponentDoesNotExist">
+            <summary>
+              Looks up a localized string similar to The game object {0} does not have a component of type {1}..
+            </summary>
+        </member>
+        <member name="T:X10D.Unity.GameObjectExtensions">
+            <summary>
+                Extension methods for <see cref="T:UnityEngine.GameObject" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.GetComponentsInChildrenOnly``1(UnityEngine.GameObject)">
+            <summary>
+                Returns an array of components of the specified type, excluding components that live on this game object.
+            </summary>
+            <param name="gameObject">The game object whose child components to retrieve.</param>
+            <typeparam name="T">The type of the components to retrieve.</typeparam>
+            <returns>An array <typeparamref name="T" /> representing the child components.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="gameObject" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at another game object.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The game object to look at.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.Vector3)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at <paramref name="target" />.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The point to look at.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="gameObject" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.Transform)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at a specified transform.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The transform to look at.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.GameObject,UnityEngine.Vector3)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at another game object.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The game object to look at.</param>
+            <param name="worldUp">A vector specifying the upward direction.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at <paramref name="target" />.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The point to look at.</param>
+            <param name="worldUp">A vector specifying the upward direction.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="gameObject" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.LookAt(UnityEngine.GameObject,UnityEngine.Transform,UnityEngine.Vector3)">
+            <summary>
+                Rotates the transform component of this game object so the forward vector points at a specified transform.
+            </summary>
+            <param name="gameObject">The game object whose rotation will be changed.</param>
+            <param name="target">The transform to look at.</param>
+            <param name="worldUp">A vector specifying the upward direction.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.SetLayerRecursively(UnityEngine.GameObject,System.Int32)">
+            <summary>
+                 Sets the new layer of this game object and its children, recursively.
+            </summary>
+            <param name="gameObject">The game object whose layer, and that of its children recursively, to change.</param>
+            <param name="layer">The new layer.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="gameObject" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.SetParent(UnityEngine.GameObject,UnityEngine.GameObject)">
+            <summary>
+                Sets the parent of this game object.
+            </summary>
+            <param name="gameObject">The game object whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.SetParent(UnityEngine.GameObject,UnityEngine.Transform)">
+            <summary>
+                Sets the parent of this game object.
+            </summary>
+            <param name="gameObject">The game object whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.SetParent(UnityEngine.GameObject,UnityEngine.GameObject,System.Boolean)">
+            <summary>
+                Sets the parent of this game object.
+            </summary>
+            <param name="gameObject">The game object whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <param name="worldPositionStays">
+                <see langword="true" /> to modify the parent-relative position, scale and rotation such that the object keeps the same
+                world space position, rotation and scale as before; otherwise, <see langword="false" />.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.GameObjectExtensions.SetParent(UnityEngine.GameObject,UnityEngine.Transform,System.Boolean)">
+            <summary>
+                Sets the parent of this game object.
+            </summary>
+            <param name="gameObject">The game object whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <param name="worldPositionStays">
+                <see langword="true" /> to modify the parent-relative position, scale and rotation such that the object keeps the same
+                world space position, rotation and scale as before; otherwise, <see langword="false" />.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="gameObject" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="T:X10D.Unity.Numerics.QuaternionExtensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Quaternion" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.QuaternionExtensions.ToSystemQuaternion(UnityEngine.Quaternion)">
+            <summary>
+                Converts the current quaternion to a <see cref="T:System.Numerics.Quaternion" />.
+            </summary>
+            <param name="quaternion">The quaternion to convert.</param>
+            <returns>The converted quaternion.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.QuaternionExtensions.ToUnityQuaternion(System.Numerics.Quaternion)">
+            <summary>
+                Converts the current quaternion to a <see cref="T:UnityEngine.Quaternion" />.
+            </summary>
+            <param name="quaternion">The quaternion to convert.</param>
+            <returns>The converted quaternion.</returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.RandomExtensions">
+            <summary>
+                Extension methods for <see cref="T:System.Random" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.RandomExtensions.NextRotation(System.Random)">
+            <summary>
+                Returns a randomly generated rotation as represented by a <see cref="T:UnityEngine.Quaternion" />.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>
+                A <see cref="T:UnityEngine.Quaternion" /> constructed from 3 random single-precision floating point numbers representing the
+                yaw, pitch, and roll.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Numerics.RandomExtensions.NextRotationUniform(System.Random)">
+            <summary>
+                Returns a randomly generated rotation with uniform distribution.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance.</param>
+            <returns>A <see cref="T:UnityEngine.Quaternion" /> constructed with uniform distribution.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="random" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.Numerics.RandomExtensions.NextUnitVector2(System.Random)">
+            <summary>
+                Returns a <see cref="T:UnityEngine.Vector2" /> with magnitude 1 whose components indicate a random point on the unit circle.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance</param>
+            <returns>
+                A <see cref="T:UnityEngine.Vector2" /> whose <see cref="P:UnityEngine.Vector2.magnitude" /> returns 1, and whose components indicate a random
+                point on the unit circle.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.RandomExtensions.NextUnitVector3(System.Random)">
+            <summary>
+                Returns a <see cref="T:UnityEngine.Vector3" /> with magnitude 1 whose components indicate a random point on the unit sphere.
+            </summary>
+            <param name="random">The <see cref="T:System.Random" /> instance</param>
+            <returns>
+                A <see cref="T:UnityEngine.Vector3" /> whose <see cref="P:UnityEngine.Vector3.magnitude" /> returns 1, and whose components indicate a random
+                point on the unit sphere.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.Vector2Extensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.Deconstruct(UnityEngine.Vector2,System.Single@,System.Single@)">
+            <summary>
+                Deconstructs the current <see cref="T:UnityEngine.Vector2" /> into its components.
+            </summary>
+            <param name="vector">The vector to deconstruct.</param>
+            <param name="x">The X component value.</param>
+            <param name="y">The Y component value.</param>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.IsOnLine(UnityEngine.Vector2,X10D.Drawing.LineF)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2" /> lies on the specified <see cref="T:X10D.Drawing.LineF" />.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="line">The line on which the point may lie.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="line" />; otherwise
+                <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.IsOnLine(UnityEngine.Vector2,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2" /> lies on the specified line.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.IsOnLine(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2" /> lies on the specified line.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.Round(UnityEngine.Vector2)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector2" /> to the nearest integer.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.Round(UnityEngine.Vector2,System.Single)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector2" /> to the nearest multiple of a specified number.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <param name="nearest">The nearest multiple to which the components should be rounded.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.ToSystemPointF(UnityEngine.Vector2)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.Vector2" /> into a <see cref="T:System.Drawing.PointF" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The resulting <see cref="T:System.Drawing.PointF" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.ToSystemSizeF(UnityEngine.Vector2)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.Vector2" /> into a <see cref="T:System.Drawing.SizeF" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The resulting <see cref="T:System.Drawing.SizeF" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.ToSystemVector(UnityEngine.Vector2)">
+            <summary>
+                Converts the current vector to a <see cref="T:System.Numerics.Vector2" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.ToUnityVector(System.Numerics.Vector2)">
+            <summary>
+                Converts the current vector to a <see cref="T:UnityEngine.Vector2" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.WithX(UnityEngine.Vector2,System.Single)">
+            <summary>
+                Returns a vector whose Y component is the same as the specified vector, and whose X component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="x">The new X component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector2" /> whose <see cref="F:UnityEngine.Vector2.y" /> components is the same as that of
+                <paramref name="vector" />, and whose <see cref="F:UnityEngine.Vector2.x" /> component is <paramref name="x" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2Extensions.WithY(UnityEngine.Vector2,System.Single)">
+            <summary>
+                Returns a vector whose X component is the same as the specified vector, and whose Y component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="y">The new Y component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector2" /> whose <see cref="F:UnityEngine.Vector2.x" /> components is the same as that of
+                <paramref name="vector" />, and whose <see cref="F:UnityEngine.Vector2.y" /> component is <paramref name="y" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.Vector2IntExtensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Vector2Int" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.Deconstruct(UnityEngine.Vector2Int,System.Int32@,System.Int32@)">
+            <summary>
+                Deconstructs the current <see cref="T:UnityEngine.Vector2" /> into its components.
+            </summary>
+            <param name="vector">The vector to deconstruct.</param>
+            <param name="x">The X component value.</param>
+            <param name="y">The Y component value.</param>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.IsOnLine(UnityEngine.Vector2Int,X10D.Drawing.LineF)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2Int" /> lies on the specified <see cref="T:X10D.Drawing.LineF" />.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="line">The line on which the point may lie.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="line" />; otherwise
+                <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.IsOnLine(UnityEngine.Vector2Int,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2Int" /> lies on the specified line.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.IsOnLine(UnityEngine.Vector2Int,UnityEngine.Vector2Int,UnityEngine.Vector2Int)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2Int" /> lies on the specified line.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.IsOnLine(UnityEngine.Vector2Int,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+                Determines if the current <see cref="T:UnityEngine.Vector2Int" /> lies on the specified line.
+            </summary>
+            <param name="point">The point to check.</param>
+            <param name="start">The starting point of the line.</param>
+            <param name="end">The ending point of the line.</param>
+            <returns>
+                <see langword="true" /> if <paramref name="point" /> lies on the line defined by <paramref name="start" /> and
+                <paramref name="end" />; otherwise <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.ToSystemPoint(UnityEngine.Vector2Int)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.Vector2Int" /> into a <see cref="T:System.Drawing.Point" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The resulting <see cref="T:System.Drawing.Point" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.ToSystemSize(UnityEngine.Vector2Int)">
+            <summary>
+                Converts the current <see cref="T:UnityEngine.Vector2Int" /> into a <see cref="T:System.Drawing.Size" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The resulting <see cref="T:System.Drawing.Size" />.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.ToSystemVector(UnityEngine.Vector2Int)">
+            <summary>
+                Converts the current vector to a <see cref="T:System.Numerics.Vector2" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.WithX(UnityEngine.Vector2Int,System.Int32)">
+            <summary>
+                Returns a vector whose Y component is the same as the specified vector, and whose X component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="x">The new X component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector2Int" /> whose <see cref="P:UnityEngine.Vector2Int.y" /> components is the same as that of
+                <paramref name="vector" />, and whose <see cref="P:UnityEngine.Vector2Int.x" /> component is <paramref name="x" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector2IntExtensions.WithY(UnityEngine.Vector2Int,System.Int32)">
+            <summary>
+                Returns a vector whose X component is the same as the specified vector, and whose Y component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="y">The new Y component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector2Int" /> whose <see cref="P:UnityEngine.Vector2Int.x" /> components is the same as that of
+                <paramref name="vector" />, and whose <see cref="P:UnityEngine.Vector2Int.y" /> component is <paramref name="y" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.Vector3Extensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Vector3" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.Deconstruct(UnityEngine.Vector3,System.Single@,System.Single@,System.Single@)">
+            <summary>
+                Deconstructs the current <see cref="T:UnityEngine.Vector3" /> into its components.
+            </summary>
+            <param name="vector">The vector to deconstruct.</param>
+            <param name="x">The X component value.</param>
+            <param name="y">The Y component value.</param>
+            <param name="z">The Z component value.</param>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.Round(UnityEngine.Vector3)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector3" /> to the nearest integer.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.Round(UnityEngine.Vector3,System.Single)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector3" /> to the nearest multiple of a specified number.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <param name="nearest">The nearest multiple to which the components should be rounded.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.ToSystemVector(UnityEngine.Vector3)">
+            <summary>
+                Converts the current vector to a <see cref="T:System.Numerics.Vector3" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.ToUnityVector(System.Numerics.Vector3)">
+            <summary>
+                Converts the current vector to a <see cref="T:UnityEngine.Vector3" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.WithX(UnityEngine.Vector3,System.Single)">
+            <summary>
+                Returns a vector whose Y and Z components are the same as the specified vector, and whose X component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="x">The new X component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3" /> whose <see cref="F:UnityEngine.Vector3.y" /> and <see cref="F:UnityEngine.Vector3.z" /> components are
+                the same as that of <paramref name="vector" />, and whose <see cref="F:UnityEngine.Vector3.x" /> component is <paramref name="x" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.WithY(UnityEngine.Vector3,System.Single)">
+            <summary>
+                Returns a vector whose X and Z components are the same as the specified vector, and whose Y component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="y">The new Y component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3" /> whose <see cref="F:UnityEngine.Vector3.x" /> and <see cref="F:UnityEngine.Vector3.z" /> components are
+                the same as that of <paramref name="vector" />, and whose <see cref="F:UnityEngine.Vector3.y" /> component is <paramref name="y" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3Extensions.WithZ(UnityEngine.Vector3,System.Single)">
+            <summary>
+                Returns a vector whose X and Y components are the same as the specified vector, and whose Z component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="z">The new Z component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3" /> whose <see cref="F:UnityEngine.Vector3.x" /> and <see cref="F:UnityEngine.Vector3.y" /> components are
+                the same as that of <paramref name="vector" />, and whose <see cref="F:UnityEngine.Vector3.z" /> component is <paramref name="z" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.Vector3IntExtensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Vector3Int" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3IntExtensions.Deconstruct(UnityEngine.Vector3Int,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+                Deconstructs the current <see cref="T:UnityEngine.Vector3Int" /> into its components.
+            </summary>
+            <param name="vector">The vector to deconstruct.</param>
+            <param name="x">The X component value.</param>
+            <param name="y">The Y component value.</param>
+            <param name="z">The Z component value.</param>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3IntExtensions.ToSystemVector(UnityEngine.Vector3Int)">
+            <summary>
+                Converts the current vector to a <see cref="T:System.Numerics.Vector3" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3IntExtensions.WithX(UnityEngine.Vector3Int,System.Int32)">
+            <summary>
+                Returns a vector whose Y and Z components are the same as the specified vector, and whose X component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="x">The new X component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3Int" /> whose <see cref="P:UnityEngine.Vector3Int.y" /> and <see cref="P:UnityEngine.Vector3Int.z"/>
+                components are the same as that of <paramref name="vector" />, and whose <see cref="P:UnityEngine.Vector3Int.x" /> component is
+                <paramref name="x" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3IntExtensions.WithY(UnityEngine.Vector3Int,System.Int32)">
+            <summary>
+                Returns a vector whose X and Z components are the same as the specified vector, and whose Y component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="y">The new Y component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3Int" /> whose <see cref="P:UnityEngine.Vector3Int.x" /> and <see cref="P:UnityEngine.Vector3Int.z"/>
+                components are the same as that of <paramref name="vector" />, and whose <see cref="P:UnityEngine.Vector3Int.y" /> component is
+                <paramref name="y" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector3IntExtensions.WithZ(UnityEngine.Vector3Int,System.Int32)">
+            <summary>
+                Returns a vector whose X and Y components are the same as the specified vector, and whose Z component is a new value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="z">The new Z component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector3Int" /> whose <see cref="P:UnityEngine.Vector3Int.x" /> and <see cref="P:UnityEngine.Vector3Int.y"/>
+                components are the same as that of <paramref name="vector" />, and whose <see cref="P:UnityEngine.Vector3Int.z" /> component is
+                <paramref name="z" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.Numerics.Vector4Extensions">
+            <summary>
+                Numeric-extensions for <see cref="T:UnityEngine.Vector4" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.Deconstruct(UnityEngine.Vector4,System.Single@,System.Single@,System.Single@,System.Single@)">
+            <summary>
+                Deconstructs the current <see cref="T:UnityEngine.Vector4" /> into its components.
+            </summary>
+            <param name="vector">The vector to deconstruct.</param>
+            <param name="x">The X component value.</param>
+            <param name="y">The Y component value.</param>
+            <param name="z">The Z component value.</param>
+            <param name="w">The W component value.</param>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.Round(UnityEngine.Vector4)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector4" /> to the nearest integer.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.Round(UnityEngine.Vector4,System.Single)">
+            <summary>
+                Rounds the components in the current <see cref="T:UnityEngine.Vector4" /> to the nearest multiple of a specified number.
+            </summary>
+            <param name="vector">The vector whose components to round.</param>
+            <param name="nearest">The nearest multiple to which the components should be rounded.</param>
+            <returns>The rounded vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.ToSystemVector(UnityEngine.Vector4)">
+            <summary>
+                Converts the current vector to a <see cref="T:System.Numerics.Vector4" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.ToUnityVector(System.Numerics.Vector4)">
+            <summary>
+                Converts the current vector to a <see cref="T:UnityEngine.Vector4" />.
+            </summary>
+            <param name="vector">The vector to convert.</param>
+            <returns>The converted vector.</returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.WithX(UnityEngine.Vector4,System.Single)">
+            <summary>
+                Returns a vector whose Y, Z, and W components are the same as the specified vector, and whose X component is a new
+                value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="x">The new X component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector4" /> whose <see cref="F:UnityEngine.Vector4.y" />, <see cref="F:UnityEngine.Vector4.z" />, and
+                <see cref="F:UnityEngine.Vector4.w" /> components are the same as that of <paramref name="vector" />, and whose
+                <see cref="F:UnityEngine.Vector4.x" /> component is <paramref name="x" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.WithY(UnityEngine.Vector4,System.Single)">
+            <summary>
+                Returns a vector whose X, Z, and W components are the same as the specified vector, and whose Y component is a new
+                value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="y">The new Y component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector4" /> whose <see cref="F:UnityEngine.Vector4.x" />, <see cref="F:UnityEngine.Vector4.z" />, and
+                <see cref="F:UnityEngine.Vector4.w" /> components are the same as that of <paramref name="vector" />, and whose
+                <see cref="F:UnityEngine.Vector4.y" /> component is <paramref name="y" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.WithZ(UnityEngine.Vector4,System.Single)">
+            <summary>
+                Returns a vector whose X, Y, and W components are the same as the specified vector, and whose Z component is a new
+                value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="z">The new Z component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector4" /> whose <see cref="F:UnityEngine.Vector4.x" />, <see cref="F:UnityEngine.Vector4.y" />, and
+                <see cref="F:UnityEngine.Vector4.w" /> components are the same as that of <paramref name="vector" />, and whose
+                <see cref="F:UnityEngine.Vector4.z" /> component is <paramref name="z" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.Numerics.Vector4Extensions.WithW(UnityEngine.Vector4,System.Single)">
+            <summary>
+                Returns a vector whose X, Y, and Z components are the same as the specified vector, and whose W component is a new
+                value.
+            </summary>
+            <param name="vector">The vector to copy.</param>
+            <param name="w">The new W component value.</param>
+            <returns>
+                A new instance of <see cref="T:UnityEngine.Vector4" /> whose <see cref="F:UnityEngine.Vector4.x" />, <see cref="F:UnityEngine.Vector4.y" />, and
+                <see cref="F:UnityEngine.Vector4.z" /> components are the same as that of <paramref name="vector" />, and whose
+                <see cref="F:UnityEngine.Vector4.w" /> component is <paramref name="w" />.
+            </returns>
+        </member>
+        <member name="T:X10D.Unity.RaycastHitExtensions">
+            <summary>
+                Extension methods for <see cref="T:UnityEngine.RaycastHit" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.RaycastHitExtensions.GetComponent``1(UnityEngine.RaycastHit)">
+            <summary>
+                Gets the component of the specified type from the object that was hit by the raycast.
+            </summary>
+            <param name="hit">The raycast hit.</param>
+            <typeparam name="T">The type of the component to retrieve.</typeparam>
+            <returns>
+                The component of the specified type from the object that was hit by the raycast, or <see langword="null" /> if no
+                component of the specified type was found.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.RaycastHitExtensions.GetComponent(UnityEngine.RaycastHit,System.Type)">
+            <summary>
+                Gets the component of the specified type from the object that was hit by the raycast.
+            </summary>
+            <param name="hit">The raycast hit.</param>
+            <param name="componentType">The type of the component to retrieve.</param>
+            <returns>
+                The component of the specified type from the object that was hit by the raycast, or <see langword="null" /> if no
+                component of the specified type was found.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="componentType" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="M:X10D.Unity.RaycastHitExtensions.TryGetComponent``1(UnityEngine.RaycastHit,``0@)">
+            <summary>
+                Attempts to get the component of the specified type from the object that was hit by the raycast, and returns a value
+                that indicates whether the operation succeeded.
+            </summary>
+            <param name="hit">The raycast hit.</param>
+            <param name="component">
+                When this method returns, contains the component of the specified type from the object that was hit by the raycast, or
+                <see langword="null" /> if no component of the specified type was found.
+            </param>
+            <typeparam name="T">The type of the component to retrieve.</typeparam>
+            <returns>
+                <see langword="true" /> if the component of the specified type was found; otherwise, <see langword="false" />.
+            </returns>
+        </member>
+        <member name="M:X10D.Unity.RaycastHitExtensions.TryGetComponent(UnityEngine.RaycastHit,System.Type,UnityEngine.Component@)">
+            <summary>
+                Attempts to get the component of the specified type from the object that was hit by the raycast, and returns a value
+                that indicates whether the operation succeeded.
+            </summary>
+            <param name="hit">The raycast hit.</param>
+            <param name="componentType">The type of the component to retrieve.</param>
+            <param name="component">
+                When this method returns, contains the component of the specified type from the object that was hit by the raycast, or
+                <see langword="null" /> if no component of the specified type was found.
+            </param>
+            <returns>
+                <see langword="true" /> if the component of the specified type was found; otherwise, <see langword="false" />.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="componentType" /> is <see langword="null" />.</exception>
+        </member>
+        <member name="T:X10D.Unity.Singleton`1">
+            <summary>
+                Represents a class which implements the singleton pattern for a specific <see cref="T:UnityEngine.MonoBehaviour" />. This class is not
+                thread-safe.
+            </summary>
+            <typeparam name="T">The type of the singleton.</typeparam>
+        </member>
+        <member name="P:X10D.Unity.Singleton`1.Instance">
+            <summary>
+                Gets the instance of the singleton.
+            </summary>
+            <value>The singleton instance.</value>
+        </member>
+        <member name="M:X10D.Unity.Singleton`1.Awake">
+            <summary>
+                Called when the script instance is being loaded.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.Singleton`1.OnDestroy">
+            <summary>
+                Called when the object is destroyed.
+            </summary>
+        </member>
+        <member name="T:X10D.Unity.TransformExtensions">
+            <summary>
+                Extension methods for <see cref="T:UnityEngine.Transform" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.TransformExtensions.LookAt(UnityEngine.Transform,UnityEngine.GameObject)">
+            <summary>
+                Rotates this transform so the forward vector points at another game object.
+            </summary>
+            <param name="transform">The transform whose rotation will be changed.</param>
+            <param name="target">The game object to look at.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="transform" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.TransformExtensions.LookAt(UnityEngine.Transform,UnityEngine.GameObject,UnityEngine.Vector3)">
+            <summary>
+                Rotates this transform so the forward vector points at another game object.
+            </summary>
+            <param name="transform">The transform whose rotation will be changed.</param>
+            <param name="target">The game object to look at.</param>
+            <param name="worldUp">A vector specifying the upward direction.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="transform" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="target" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.TransformExtensions.SetParent(UnityEngine.Transform,UnityEngine.GameObject)">
+            <summary>
+                Sets the parent of this transform.
+            </summary>
+            <param name="transform">The transform whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="transform" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="M:X10D.Unity.TransformExtensions.SetParent(UnityEngine.Transform,UnityEngine.GameObject,System.Boolean)">
+            <summary>
+                Sets the parent of this transform.
+            </summary>
+            <param name="transform">The transform whose parent to change.</param>
+            <param name="parent">The new parent.</param>
+            <param name="worldPositionStays">
+                <see langword="true" /> to modify the parent-relative position, scale and rotation such that the object keeps the same
+                world space position, rotation and scale as before; otherwise, <see langword="false" />.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                <para><paramref name="transform" /> is <see langword="null" />.</para>
+                -or-
+                <para><paramref name="parent" /> is <see langword="null" />.</para>
+            </exception>
+        </member>
+        <member name="T:X10D.Unity.WaitForFrames">
+            <summary>
+                Represents a yield instruction that waits for a specific number of frames.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.WaitForFrames.#ctor(System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForFrames" /> struct.
+            </summary>
+            <param name="frameCount">The frame count.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForFrames.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForFrames.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForFrames.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForKeyDown">
+            <summary>
+                Represents a yield instruction that waits for a key to be pressed.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyDown.#ctor(UnityEngine.KeyCode)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForKeyDown" /> struct.
+            </summary>
+            <param name="keyCode">The key to wait for.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForKeyDown.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyDown.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyDown.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForKeyUp">
+            <summary>
+                Represents a yield instruction that waits for a key to be released.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyUp.#ctor(UnityEngine.KeyCode)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForKeyUp" /> struct.
+            </summary>
+            <param name="keyCode">The key to wait for.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForKeyUp.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyUp.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForKeyUp.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForSecondsNoAlloc">
+            <summary>
+                Represents a yield instruction which waits for a specified amount of seconds.
+            </summary>
+            <remarks>This struct exists as an allocation-free alternative to <see cref="T:UnityEngine.WaitForSeconds" />.</remarks>
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsNoAlloc.#ctor(System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForTimeSpan" /> struct.
+            </summary>
+            <param name="duration">The duration of the pause, in seconds.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForSecondsNoAlloc.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsNoAlloc.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsNoAlloc.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForSecondsRealtimeNoAlloc">
+            <summary>
+                Represents a yield instruction which waits for a given amount of time, as provided by a <see cref="T:System.TimeSpan" />.
+            </summary>
+            <remarks>This struct exists as an allocation-free alternative to <see cref="T:UnityEngine.WaitForSecondsRealtime" />.</remarks>
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsRealtimeNoAlloc.#ctor(System.Single)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForTimeSpan" /> struct.
+            </summary>
+            <param name="duration">The duration of the pause, in seconds.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForSecondsRealtimeNoAlloc.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsRealtimeNoAlloc.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForSecondsRealtimeNoAlloc.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForTimeSpan">
+            <summary>
+                Represents a yield instruction which waits for a given amount of time, as provided by a <see cref="T:System.TimeSpan" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpan.#ctor(System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForTimeSpan" /> struct.
+            </summary>
+            <param name="duration">The duration of the pause.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForTimeSpan.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpan.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpan.Reset">
+            <inheritdoc />
+        </member>
+        <member name="T:X10D.Unity.WaitForTimeSpanRealtime">
+            <summary>
+                Represents a yield instruction which waits for a given amount of time, as provided by a <see cref="T:System.TimeSpan" />.
+            </summary>
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpanRealtime.#ctor(System.TimeSpan)">
+            <summary>
+                Initializes a new instance of the <see cref="T:X10D.Unity.WaitForTimeSpanRealtime" /> struct.
+            </summary>
+            <param name="duration">The duration of the pause.</param>
+        </member>
+        <member name="P:X10D.Unity.WaitForTimeSpanRealtime.Current">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpanRealtime.MoveNext">
+            <inheritdoc />
+        </member>
+        <member name="M:X10D.Unity.WaitForTimeSpanRealtime.Reset">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
